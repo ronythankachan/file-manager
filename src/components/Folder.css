@@ -1,0 +1,21 @@
+.folder{
+    width: 100px;
+    height: 150px;
+  }
+  .folder-icon{
+    height: 70%;
+  }
+  .folder-icon > img{
+      object-fit: cover;
+      width: 100%;
+  }
+  .folder-name{
+      height: 30%;
+      word-wrap: break-word;
+      text-align: center;
+      color: white;
+      font-weight: bolder;
+  }
+  .folder:hover{
+      opacity: 0.6;
+  }
