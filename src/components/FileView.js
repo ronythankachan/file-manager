@@ -1,13 +1,16 @@
-import React,{useContext} from 'react'
+import React,{useContext,useRef} from 'react'
 import {FolderContext} from '../App'
 import Folder from './Folder'
+import ContextMenu from './ContextMenu';
 
 const FileView = () => {
+    const outerRef = useRef(null);
     const {folders,path} = useContext(FolderContext);
     return (
-        <div className="fileview">
-            <Navigation path={path} poppedPaths setPoppedPaths />
+        <div className="fileview" ref={outerRef}>
+            <Navigation path={path}/>
             <FolderView folders={folders}/>
+            <ContextMenu outerRef={outerRef} type="containercontext"/>
         </div>
     )
 }
